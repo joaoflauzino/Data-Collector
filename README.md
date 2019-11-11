@@ -1,4 +1,4 @@
-# Project Data-Collector of Twitter
+# Project Sentiment-Analysis-Twitter_Natural-Language-API-Google-Cloud
 
 This project was developed for collect data from twitter using python and get the sentiment of sentence in Natural Language API of Google Cloud. The data will be collect according the key word that will be input in the code.
 
