@@ -16,3 +16,20 @@ To execute it in your machine, please just replace the list variables bellow in 
 - start_date --- Interval to collect date from twitter
 - end_date --- Interval to collect date from twitter
 - language --- tweets language that you'd like to collect data
+
+# Language
+
+The code was developed in python.
+
+# Libraries Dependecies
+
+- tweepy
+- pandas
+- numpy
+- nltk
+- unidecode
+- google.cloud
+- sqlalchemy
+- time
+- re
+- os
