@@ -104,7 +104,7 @@ def get_twitter(search_words):
 
     new_search = search_words + " -filter:retweets" #Filtering retweets
 
-    tweets = tw.Cursor(api.search,q=new_search,lang="pt",since="DATE", until = "DATE").items(10000)
+    tweets = tw.Cursor(api.search,q=new_search,lang=language,since=start_date, until =end_date).items(10000)
 
     for tweet in tweets:
         original_tweet.append((tweet.text).upper())
@@ -135,7 +135,7 @@ def sentiment(text):
     i = 0
     while i < 50:
     
-        document = types.Document(content=text[i],type=enums.Document.Type.PLAIN_TEXT, language = LANGUAGE) 
+        document = types.Document(content=text[i],type=enums.Document.Type.PLAIN_TEXT, language = language) 
         sentiment = client.analyze_sentiment(document).document_sentiment
         score.append(sentiment.score)
         magnitude.append(sentiment.magnitude)
