@@ -1,8 +1,4 @@
-# Data Science Portfolio
-
-My purpose is to provide technology and tools for companies and people that want to transform data in useful information for big decisions.
-
-# Project
+# Project Data-Collector of Twitter
 
 This project was developed for collect data from twitter using python and send them to database in Postgres. The data will be collect according the key word that will be input in the code.
 
