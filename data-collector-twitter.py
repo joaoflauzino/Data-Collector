@@ -26,10 +26,10 @@ import time
 
 client = language.LanguageServiceClient()
 
-consumer_key= 'oU2iXia4DvaIuxQdyzDKEUFPk'
-consumer_secret= 'H4ZQUKRF65Iy2dlaV1NZfMWECczQOZixhUDcnM9cDEmBbqIGcZ'
-access_token= '219108071-dNN6fAoqJLU4fOY5vuCtxeKKV3T1oC7BE2ViskrS'
-access_token_secret= '3dwR6zeT2CmC2AtdUo4YidxWiPLPoZvs8i65u73bRuatu'
+consumer_key= consumer_key
+consumer_secret= consumer_secret
+access_token= access_token
+access_token_secret= access_token_secret
 
 auth = tw.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
@@ -104,7 +104,7 @@ def get_twitter(search_words):
 
     new_search = search_words + " -filter:retweets" #Filtering retweets
 
-    tweets = tw.Cursor(api.search,q=new_search,lang="pt",since="2019-03-01", until = "2019-03-14").items(10000)
+    tweets = tw.Cursor(api.search,q=new_search,lang="pt",since="DATE", until = "DATE").items(10000)
 
     for tweet in tweets:
         original_tweet.append((tweet.text).upper())
@@ -130,12 +130,12 @@ def break_twitter(n):
 
 # Getting classification of sentiment in google cloud
 
-def sentiment(textos):
+def sentiment(text):
 
     i = 0
     while i < 50:
     
-        document = types.Document(content=textos[i],type=enums.Document.Type.PLAIN_TEXT, language = LANGUAGE) 
+        document = types.Document(content=text[i],type=enums.Document.Type.PLAIN_TEXT, language = LANGUAGE) 
         sentiment = client.analyze_sentiment(document).document_sentiment
         score.append(sentiment.score)
         magnitude.append(sentiment.magnitude)
