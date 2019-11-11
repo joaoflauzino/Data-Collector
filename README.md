@@ -11,7 +11,7 @@ To execute it in your machine, please just replace the list variables bellow in 
 - access_token --- Authentication of twitter
 - access_token_secret --- Authentication of twitter
 - word --- The word that you'd like to search
-- SQL --- In this case, I download the stopwords from one database that I created for stopwords. But you can use 'nltk.download("stopwords")'
+- sql --- In this case, I download the stopwords from one database that I created for stopwords. But you can use 'nltk.download("stopwords")'
 - information_database --- Credentials for database
 - start_date --- Interval to collect date from twitter
 - end_date --- Interval to collect date from twitter
